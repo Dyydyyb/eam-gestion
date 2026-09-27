@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors Oficiales EAM */
+  --brand-primary: #03387E;
+  --brand-primary-dark: #022554;
+  --brand-primary-darker: #011634;
+  --brand-primary-light: #0A4FA8;
+  --brand-primary-soft: #EEF5FC;
+  --brand-primary-tint: rgba(3, 56, 126, 0.08);
+
+  /* Acentos */
+  --brand-accent: #00A3FF;
+  --brand-accent-glow: rgba(0, 163, 255, 0.35);
+  --brand-accent-soft: rgba(0, 163, 255, 0.12);
+  --brand-cyan: #38BDF8;
+  --brand-green: #10B981;
+  --brand-warning: #F59E0B;
+  --brand-danger: #EF4444;
+
+  /* WhatsApp Oficial */
+  --whatsapp-green: #25D366;
+  --whatsapp-hover: #20BA5A;
+  --whatsapp-glow: rgba(37, 211, 102, 0.3);
+
+  /* Neutros */
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-muted: #F1F5F9;
+  --border-subtle: #E2E8F0;
+  --border-brand: #C7DEFA;
+
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+}
+
+@theme {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-dark: var(--brand-primary-dark);
+  --color-brand-primary-light: var(--brand-primary-light);
+  --color-brand-primary-soft: var(--brand-primary-soft);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-soft: var(--brand-accent-soft);
+  --color-whatsapp: var(--whatsapp-green);
+  --color-whatsapp-hover: var(--whatsapp-hover);
+  --font-heading: var(--font-outfit), sans-serif;
+  --font-body: var(--font-body), sans-serif;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* Eyebrow pattern: Pequeño, en mayúsculas, tracking amplio */
+.eyebrow {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-accent);
+}
+
+/* Card con borde ultra redondeado característico de EAM (20-24px) */
+.eam-card {
+  background: #FFFFFF;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 20px -2px rgba(3, 56, 126, 0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.eam-card:hover {
+  box-shadow: 0 10px 25px -4px rgba(3, 56, 126, 0.08);
+}
+
+/* Botón estilo pill completamente redondeado */
+.btn-pill {
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-pill-primary {
+  background: var(--brand-accent);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px var(--brand-accent-glow);
+}
+
+.btn-pill-primary:hover {
+  background: #008be0;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px var(--brand-accent-glow);
+}
+
+.btn-pill-whatsapp {
+  background: var(--whatsapp-green);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px var(--whatsapp-glow);
+}
+
+.btn-pill-whatsapp:hover {
+  background: var(--whatsapp-hover);
+  transform: translateY(-1px);
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
