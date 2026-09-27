@@ -455,22 +455,17 @@ export default function AdminDashboardPage() {
     <div className="space-y-8 animate-in fade-in duration-300">
       {/* Top Banner de Bienvenida y Filtros de Fecha Globales */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-200">
-        <div className="flex items-center gap-3.5">
-          <div className="w-13 h-13 rounded-2xl bg-white p-1.5 shadow-sm border border-slate-200 flex items-center justify-center overflow-hidden shrink-0 ring-4 ring-[#03387E]/5">
-            <Image src="/logo.png" alt="EAM Logo Oficial" width={44} height={44} className="object-contain" priority />
+        <div>
+          <div className="flex items-center gap-2">
+            <span className="eyebrow">Panel de Control Operativo</span>
+            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-[#03387E]">Florencio Varela</span>
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="eyebrow">Panel de Control Operativo</span>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-[#03387E]">Florencio Varela</span>
-            </div>
-            <h1 className="font-heading font-black text-2xl md:text-3xl text-[#03387E] tracking-tight">
-              Dashboard General
-            </h1>
-            <p className="text-xs md:text-sm text-slate-500 font-medium">
-              Resumen en vivo de clases, ocupación de flota, finanzas y recordatorios de Florencio Varela.
-            </p>
-          </div>
+          <h1 className="font-heading font-black text-2xl md:text-3xl text-[#03387E] tracking-tight">
+            Dashboard General
+          </h1>
+          <p className="text-xs md:text-sm text-slate-500 font-medium">
+            Resumen en vivo de clases, ocupación de flota, finanzas y recordatorios de Florencio Varela.
+          </p>
         </div>
 
         {/* Controles de Granularidad y Selector Libre de Fecha */}
