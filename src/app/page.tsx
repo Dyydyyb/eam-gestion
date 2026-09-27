@@ -24,6 +24,7 @@ import { useApp } from "@/context/AppContext";
 import { formatCurrency, formatDate, formatTime } from "@/lib/utils";
 import { isValidArgentinePhone } from "@/lib/phone";
 import { messagingService, DEFAULT_TEMPLATES } from "@/lib/messaging";
+import "./landing.css";
 
 export default function HomePage() {
   const { services, instructors, vehicles, checkSlotAvailable, bookLesson } = useApp();
@@ -330,11 +331,22 @@ export default function HomePage() {
                 <li><a href="#egresados" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Egresados</a></li>
                 <li><a href="#ubicacion" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Ubicación</a></li>
                 <li><a href="#wizard" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Turnos</a></li>
+                <li className="md:hidden"><Link href="/admin/dashboard" className="nav-link font-bold text-[#00A3FF]" onClick={() => setMobileMenuOpen(false)}>Acceso CRM</Link></li>
               </ul>
             </nav>
 
             {/* Header Actions: Botón Turnos + Botón Consultar + Acceso Panel */}
             <div className="header-actions">
+              <Link
+                href="/admin/dashboard"
+                className="btn-header-cta"
+                style={{ backgroundColor: "rgba(255, 255, 255, 0.12)", color: "#FFFFFF", border: "1px solid rgba(255, 255, 255, 0.25)" }}
+                title="Acceso al Panel de Control y CRM"
+              >
+                <LayoutDashboard className="w-4 h-4 text-[#38BDF8]" />
+                <span>Panel CRM</span>
+              </Link>
+
               <Link
                 href="/reservar"
                 className="btn-header-cta"
@@ -348,15 +360,6 @@ export default function HomePage() {
                 <MessageSquare className="w-4 h-4" />
                 <span>Consultar</span>
               </a>
-
-              <Link
-                href="/admin/dashboard"
-                className="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-slate-300 hover:text-white bg-white/10 hover:bg-white/20 transition-colors"
-                title="Acceso al Panel Interno de Gestión"
-              >
-                <LayoutDashboard className="w-3.5 h-3.5 text-[#00A3FF]" />
-                <span>Panel Interno</span>
-              </Link>
 
               {/* Mobile Toggle Button */}
               <button
